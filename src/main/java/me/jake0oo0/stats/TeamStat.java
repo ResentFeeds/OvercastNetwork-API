@@ -1,19 +1,20 @@
-package me.jake0oo0;
+package me.jake0oo0.stats;
 
-public class PlayerStat {
+/**
+ * Created by jake on 12/4/13.
+ */
+public class TeamStat {
 	Double kd;
 	Double kk;
-	int friends;
 	int kills;
 	int deaths;
 	int cores;
 	int monuments;
 	int wools;
 
-	public PlayerStat(Double kd, Double kk, int friends, int kills, int deaths, int cores, int monuments, int wools) {
+	public TeamStat(Double kd, Double kk, int kills, int deaths, int cores, int monuments, int wools) {
 		this.kd = kd;
 		this.kk = kk;
-		this.friends = friends;
 		this.kills = kills;
 		this.deaths = deaths;
 		this.cores = cores;
@@ -27,10 +28,6 @@ public class PlayerStat {
 
 	public Double getKk() {
 		return kk;
-	}
-
-	public int getFriends() {
-		return friends;
 	}
 
 	public int getKills() {

@@ -1,4 +1,6 @@
-package me.jake0oo0;
+package me.jake0oo0.types;
+
+import me.jake0oo0.stats.PlayerStat;
 
 public class OvercastPlayer {
 	String username;

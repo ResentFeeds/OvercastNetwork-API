@@ -1,12 +1,8 @@
-package me.jake0oo0;
+package me.jake0oo0.utils;
 
 import java.math.BigDecimal;
 
-/**
- * Created by jake on 12/4/13.
- */
 public class NumberUtils {
-
 	public static double round(double value, int places) {
 		if (places < 0) throw new IllegalArgumentException();
 

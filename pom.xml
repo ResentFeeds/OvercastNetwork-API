@@ -17,7 +17,7 @@
                 <configuration>
                     <archive>
                         <manifestEntries>
-                            <Main-Class>me.jake0oo0.API</Main-Class>
+                            <Main-Class>me.jake0oo0.api.API</Main-Class>
                         </manifestEntries>
                     </archive>
                 </configuration>

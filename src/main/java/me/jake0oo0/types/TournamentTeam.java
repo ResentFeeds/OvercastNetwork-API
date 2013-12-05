@@ -1,4 +1,6 @@
-package me.jake0oo0;
+package me.jake0oo0.types;
+
+import me.jake0oo0.stats.TeamStat;
 
 import java.util.List;
 
@@ -12,5 +14,13 @@ public class TournamentTeam {
 	public TournamentTeam(List<OvercastPlayer> players, TeamStat stats) {
 		this.players = players;
 		this.stats = stats;
+	}
+
+	public List<OvercastPlayer> getPlayers() {
+		return players;
+	}
+
+	public TeamStat getStats() {
+		return stats;
 	}
 }
