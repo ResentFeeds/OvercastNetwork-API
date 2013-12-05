@@ -22,7 +22,7 @@ public class OvercastTeam {
 	}
 
 	public void parseStats() {
-		this.stats = StatParser.parseOvercastTeam(players);
+		this.stats = StatParser.parseOvercastTeam(getPlayers());
 	}
 
 	public String getName() {

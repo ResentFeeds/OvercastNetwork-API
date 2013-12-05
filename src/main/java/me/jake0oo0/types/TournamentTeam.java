@@ -18,7 +18,7 @@ public class TournamentTeam {
 	}
 
 	public void parseStats() {
-		this.stats = StatParser.parseOvercastTeam(players);
+		this.stats = StatParser.parseOvercastTeam(getPlayers());
 	}
 
 	public List<OvercastPlayer> getPlayers() {
