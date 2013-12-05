@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="639a1328-dbe1-478b-a570-de13bc2675fa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/me/jake0oo0/parsers/TeamParser.java" />
-      <change type="MOVED" beforePath="C:\Users\jake\Documents\Development\OvercastWebAPI\src\main\java\me\jake0oo0\stats\StatParser.java" afterPath="$PROJECT_DIR$/src/main/java/me/jake0oo0/parsers/StatParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/jake0oo0/api/API.java" afterPath="$PROJECT_DIR$/src/main/java/me/jake0oo0/api/API.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/jake0oo0/types/OvercastPlayer.java" afterPath="$PROJECT_DIR$/src/main/java/me/jake0oo0/types/OvercastPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/jake0oo0/types/OvercastTeam.java" afterPath="$PROJECT_DIR$/src/main/java/me/jake0oo0/types/OvercastTeam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/jake0oo0/types/TournamentTeam.java" afterPath="$PROJECT_DIR$/src/main/java/me/jake0oo0/types/TournamentTeam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="639a1328-dbe1-478b-a570-de13bc2675fa" name="Default" comment="" />
     <ignored path="OvercastWebAPI.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -151,7 +143,7 @@
       <file leaf-file-name="API.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/api/API.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="5" selection-start="3233" selection-end="3233" vertical-scroll-proportion="0.7721943" vertical-offset="1494" max-vertical-offset="2091">
+            <state line="117" column="0" selection-start="3236" selection-end="3236" vertical-scroll-proportion="0.8291457" vertical-offset="1494" max-vertical-offset="2091">
               <folding>
                 <element signature="e#0#3236#0" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -890,7 +882,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/api/API.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="5" selection-start="3233" selection-end="3233" vertical-scroll-proportion="0.7721943" vertical-offset="1494" max-vertical-offset="2091">
+        <state line="117" column="0" selection-start="3236" selection-end="3236" vertical-scroll-proportion="0.8291457" vertical-offset="1494" max-vertical-offset="2091">
           <folding>
             <element signature="e#0#3236#0" expanded="true" />
             <element signature="imports" expanded="true" />
