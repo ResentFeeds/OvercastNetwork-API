@@ -24,7 +24,9 @@
 package me.jake0oo0.stats;
 
 /**
- * Created by jake on 12/4/13.
+ * Instance of a TournamentTeam's statistics
+ *
+ * @author Jake0oo0
  */
 public class TeamStat {
 	Double kd;

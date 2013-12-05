@@ -31,6 +31,11 @@ import org.jsoup.nodes.Document;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Stat parser, parses team and player stats
+ *
+ * @author Jake0oo0
+ */
 public class StatParser {
 
 	public static PlayerStat parsePlayerStats(String user) {

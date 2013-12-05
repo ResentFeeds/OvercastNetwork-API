@@ -29,7 +29,12 @@ import me.jake0oo0.stats.TeamStat;
 import java.util.List;
 
 /**
- * Created by jake on 12/4/13.
+ * An instance of a OvercastNetwork league
+ * partaking in a current tournament.
+ * This class only gets players that are
+ * actually on the tourney roster
+ *
+ * @author Jake0oo0
  */
 public class TournamentTeam {
 	List<OvercastPlayer> players;

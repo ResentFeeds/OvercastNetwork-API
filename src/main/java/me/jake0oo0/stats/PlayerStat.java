@@ -23,6 +23,11 @@
  */
 package me.jake0oo0.stats;
 
+/**
+ * Instance of an OvercastPlayer's stats
+ *
+ * @author Jake0oo0
+ */
 public class PlayerStat {
 	Double kd;
 	Double kk;

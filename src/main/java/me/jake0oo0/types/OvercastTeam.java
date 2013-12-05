@@ -29,7 +29,10 @@ import me.jake0oo0.stats.TeamStat;
 import java.util.List;
 
 /**
- * Created by jake on 12/4/13.
+ * An OvercastNetwork league team,
+ * not necessarily competing in a tournament
+ *
+ * @author Jake0oo0
  */
 public class OvercastTeam {
 	String name;

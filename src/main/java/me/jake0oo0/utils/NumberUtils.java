@@ -25,6 +25,12 @@ package me.jake0oo0.utils;
 
 import java.math.BigDecimal;
 
+/**
+ * Basic number utilities for
+ * rounding and other math operations
+ *
+ * @author Jake0oo0
+ */
 public class NumberUtils {
 	public static double round(double value, int places) {
 		if (places < 0) throw new IllegalArgumentException();

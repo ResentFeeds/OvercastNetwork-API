@@ -26,6 +26,11 @@ package me.jake0oo0.types;
 import me.jake0oo0.stats.PlayerStat;
 import me.jake0oo0.stats.StatParser;
 
+/**
+ * Instance of an OvercastNetwork player, saves stats and username
+ *
+ * @author Jake0oo0
+ */
 public class OvercastPlayer {
 	String username;
 	PlayerStat stats;

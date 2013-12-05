@@ -24,7 +24,9 @@
 package me.jake0oo0.api;
 
 /**
- * Created by jake on 12/4/13.
+ * API class for the Overcast API
+ *
+ * @author Jake0oo0
  */
 public class API {
 }

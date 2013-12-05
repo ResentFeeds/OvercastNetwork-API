@@ -25,6 +25,12 @@ package me.jake0oo0.types;
 
 import java.util.List;
 
+/**
+ * Instance of an OvercastNetwork tournament, providing
+ * required data like the teams, min players, and it's URL
+ *
+ * @author Jake0oo0
+ */
 public class OvercastTournament {
 	List<TournamentTeam> teams;
 	String url;

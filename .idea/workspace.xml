@@ -11,8 +11,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/jake0oo0/stats/StatParser.java" afterPath="$PROJECT_DIR$/src/main/java/me/jake0oo0/stats/StatParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/jake0oo0/stats/TeamStat.java" afterPath="$PROJECT_DIR$/src/main/java/me/jake0oo0/stats/TeamStat.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/jake0oo0/types/TournamentTeam.java" afterPath="$PROJECT_DIR$/src/main/java/me/jake0oo0/types/TournamentTeam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
     </list>
     <ignored path="OvercastWebAPI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,32 +77,34 @@
       <file leaf-file-name="OvercastTeam.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/types/OvercastTeam.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="2" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224">
+            <state line="34" column="19" selection-start="1372" selection-end="1372" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1275">
               <folding>
+                <element signature="e#0#1963#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#1709#1710#0" expanded="true" />
-                <element signature="e#1727#1728#0" expanded="true" />
-                <element signature="e#1754#1755#0" expanded="true" />
-                <element signature="e#1771#1772#0" expanded="true" />
-                <element signature="e#1816#1817#0" expanded="true" />
-                <element signature="e#1837#1838#0" expanded="true" />
-                <element signature="e#1868#1869#0" expanded="true" />
-                <element signature="e#1887#1888#0" expanded="true" />
+                <element signature="e#1781#1782#0" expanded="true" />
+                <element signature="e#1799#1800#0" expanded="true" />
+                <element signature="e#1826#1827#0" expanded="true" />
+                <element signature="e#1843#1844#0" expanded="true" />
+                <element signature="e#1888#1889#0" expanded="true" />
+                <element signature="e#1909#1910#0" expanded="true" />
+                <element signature="e#1940#1941#0" expanded="true" />
+                <element signature="e#1959#1960#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TournamentTeam.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TournamentTeam.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/types/TournamentTeam.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="2" selection-start="518" selection-end="518" vertical-scroll-proportion="0.31323284" vertical-offset="0" max-vertical-offset="1020">
+            <state line="36" column="19" selection-start="1448" selection-end="1448" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1105">
               <folding>
+                <element signature="e#0#1863#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#1640#1641#0" expanded="true" />
-                <element signature="e#1661#1662#0" expanded="true" />
-                <element signature="e#1692#1693#0" expanded="true" />
-                <element signature="e#1711#1712#0" expanded="true" />
+                <element signature="e#1788#1789#0" expanded="true" />
+                <element signature="e#1809#1810#0" expanded="true" />
+                <element signature="e#1840#1841#0" expanded="true" />
+                <element signature="e#1859#1860#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -113,22 +113,23 @@
       <file leaf-file-name="TeamStat.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/stats/TeamStat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="2" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1377">
+            <state line="28" column="19" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.0" vertical-offset="277" max-vertical-offset="1411">
               <folding>
-                <element signature="e#1602#1603#0" expanded="true" />
-                <element signature="e#1618#1619#0" expanded="true" />
-                <element signature="e#1644#1645#0" expanded="true" />
-                <element signature="e#1660#1661#0" expanded="true" />
-                <element signature="e#1686#1687#0" expanded="true" />
-                <element signature="e#1705#1706#0" expanded="true" />
-                <element signature="e#1732#1733#0" expanded="true" />
-                <element signature="e#1752#1753#0" expanded="true" />
-                <element signature="e#1778#1779#0" expanded="true" />
-                <element signature="e#1797#1798#0" expanded="true" />
-                <element signature="e#1827#1828#0" expanded="true" />
-                <element signature="e#1850#1851#0" expanded="true" />
-                <element signature="e#1876#1877#0" expanded="true" />
-                <element signature="e#1895#1896#0" expanded="true" />
+                <element signature="e#0#1936#0" expanded="true" />
+                <element signature="e#1639#1640#0" expanded="true" />
+                <element signature="e#1655#1656#0" expanded="true" />
+                <element signature="e#1681#1682#0" expanded="true" />
+                <element signature="e#1697#1698#0" expanded="true" />
+                <element signature="e#1723#1724#0" expanded="true" />
+                <element signature="e#1742#1743#0" expanded="true" />
+                <element signature="e#1769#1770#0" expanded="true" />
+                <element signature="e#1789#1790#0" expanded="true" />
+                <element signature="e#1815#1816#0" expanded="true" />
+                <element signature="e#1834#1835#0" expanded="true" />
+                <element signature="e#1864#1865#0" expanded="true" />
+                <element signature="e#1887#1888#0" expanded="true" />
+                <element signature="e#1913#1914#0" expanded="true" />
+                <element signature="e#1932#1933#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -137,13 +138,14 @@
       <file leaf-file-name="OvercastPlayer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/types/OvercastPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="2" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
+            <state line="31" column="19" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.0" vertical-offset="277" max-vertical-offset="1020">
               <folding>
+                <element signature="e#0#1722#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#1546#1547#0" expanded="true" />
-                <element signature="e#1568#1569#0" expanded="true" />
-                <element signature="e#1601#1602#0" expanded="true" />
-                <element signature="e#1620#1621#0" expanded="true" />
+                <element signature="e#1644#1645#0" expanded="true" />
+                <element signature="e#1666#1667#0" expanded="true" />
+                <element signature="e#1699#1700#0" expanded="true" />
+                <element signature="e#1718#1719#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -152,8 +154,10 @@
       <file leaf-file-name="API.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/api/API.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="51" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-              <folding />
+            <state line="28" column="19" selection-start="1227" selection-end="1227" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="646">
+              <folding>
+                <element signature="e#0#1253#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -161,25 +165,25 @@
       <file leaf-file-name="PlayerStat.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/stats/PlayerStat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="10" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428">
+            <state line="28" column="19" selection-start="1236" selection-end="1236" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1513">
               <folding>
-                <element signature="e#0#1966#0" expanded="true" />
-                <element signature="e#1620#1621#0" expanded="true" />
-                <element signature="e#1636#1637#0" expanded="true" />
-                <element signature="e#1662#1663#0" expanded="true" />
-                <element signature="e#1678#1679#0" expanded="true" />
-                <element signature="e#1706#1707#0" expanded="true" />
-                <element signature="e#1727#1728#0" expanded="true" />
-                <element signature="e#1753#1754#0" expanded="true" />
-                <element signature="e#1772#1773#0" expanded="true" />
+                <element signature="e#0#2038#0" expanded="true" />
+                <element signature="e#1692#1693#0" expanded="true" />
+                <element signature="e#1708#1709#0" expanded="true" />
+                <element signature="e#1734#1735#0" expanded="true" />
+                <element signature="e#1750#1751#0" expanded="true" />
+                <element signature="e#1778#1779#0" expanded="true" />
                 <element signature="e#1799#1800#0" expanded="true" />
-                <element signature="e#1819#1820#0" expanded="true" />
-                <element signature="e#1845#1846#0" expanded="true" />
-                <element signature="e#1864#1865#0" expanded="true" />
-                <element signature="e#1894#1895#0" expanded="true" />
+                <element signature="e#1825#1826#0" expanded="true" />
+                <element signature="e#1844#1845#0" expanded="true" />
+                <element signature="e#1871#1872#0" expanded="true" />
+                <element signature="e#1891#1892#0" expanded="true" />
                 <element signature="e#1917#1918#0" expanded="true" />
-                <element signature="e#1943#1944#0" expanded="true" />
-                <element signature="e#1962#1963#0" expanded="true" />
+                <element signature="e#1936#1937#0" expanded="true" />
+                <element signature="e#1966#1967#0" expanded="true" />
+                <element signature="e#1989#1990#0" expanded="true" />
+                <element signature="e#2015#2016#0" expanded="true" />
+                <element signature="e#2034#2035#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -188,19 +192,22 @@
       <file leaf-file-name="StatParser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/stats/StatParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="8" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1938">
+            <state line="36" column="19" selection-start="1429" selection-end="1429" vertical-scroll-proportion="0.0" vertical-offset="158" max-vertical-offset="2023">
               <folding>
+                <element signature="e#0#3634#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NumberUtils.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="NumberUtils.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/utils/NumberUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="2" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
-              <folding />
+            <state line="26" column="0" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.60134006" vertical-offset="83" max-vertical-offset="816">
+              <folding>
+                <element signature="e#0#1565#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -208,14 +215,15 @@
       <file leaf-file-name="OvercastTournament.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/types/OvercastTournament.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="2" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
+            <state line="31" column="19" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0" vertical-offset="260" max-vertical-offset="1054">
               <folding>
-                <element signature="e#1488#1489#0" expanded="true" />
-                <element signature="e#1507#1508#0" expanded="true" />
-                <element signature="e#1534#1535#0" expanded="true" />
-                <element signature="e#1551#1552#0" expanded="true" />
-                <element signature="e#1582#1583#0" expanded="true" />
-                <element signature="e#1606#1607#0" expanded="true" />
+                <element signature="e#0#1756#0" expanded="true" />
+                <element signature="e#1634#1635#0" expanded="true" />
+                <element signature="e#1653#1654#0" expanded="true" />
+                <element signature="e#1680#1681#0" expanded="true" />
+                <element signature="e#1697#1698#0" expanded="true" />
+                <element signature="e#1728#1729#0" expanded="true" />
+                <element signature="e#1752#1753#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -250,8 +258,8 @@
         <option value="$PROJECT_DIR$/src/main/java/me/jake0oo0/stats/TeamStat.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/jake0oo0/types/OvercastTeam.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/jake0oo0/types/OvercastTournament.java" />
-        <option value="$PROJECT_DIR$/src/main/java/me/jake0oo0/utils/NumberUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/jake0oo0/types/TournamentTeam.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/jake0oo0/utils/NumberUtils.java" />
       </list>
     </option>
   </component>
@@ -470,7 +478,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.lastSelected" value="template.copyright.formatting" />
+    <property name="options.lastSelected" value="preferences.sourceCode.Java" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -636,7 +644,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1310" height="786" extended-state="7" />
+    <frame x="-9" y="-9" width="1310" height="786" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -700,40 +708,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/api/API.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="51" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <folding />
+        <state line="28" column="19" selection-start="1227" selection-end="1227" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="646">
+          <folding>
+            <element signature="e#0#1253#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/stats/PlayerStat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="10" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428">
+        <state line="28" column="19" selection-start="1236" selection-end="1236" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1513">
           <folding>
-            <element signature="e#0#1966#0" expanded="true" />
-            <element signature="e#1620#1621#0" expanded="true" />
-            <element signature="e#1636#1637#0" expanded="true" />
-            <element signature="e#1662#1663#0" expanded="true" />
-            <element signature="e#1678#1679#0" expanded="true" />
-            <element signature="e#1706#1707#0" expanded="true" />
-            <element signature="e#1727#1728#0" expanded="true" />
-            <element signature="e#1753#1754#0" expanded="true" />
-            <element signature="e#1772#1773#0" expanded="true" />
+            <element signature="e#0#2038#0" expanded="true" />
+            <element signature="e#1692#1693#0" expanded="true" />
+            <element signature="e#1708#1709#0" expanded="true" />
+            <element signature="e#1734#1735#0" expanded="true" />
+            <element signature="e#1750#1751#0" expanded="true" />
+            <element signature="e#1778#1779#0" expanded="true" />
             <element signature="e#1799#1800#0" expanded="true" />
-            <element signature="e#1819#1820#0" expanded="true" />
-            <element signature="e#1845#1846#0" expanded="true" />
-            <element signature="e#1864#1865#0" expanded="true" />
-            <element signature="e#1894#1895#0" expanded="true" />
+            <element signature="e#1825#1826#0" expanded="true" />
+            <element signature="e#1844#1845#0" expanded="true" />
+            <element signature="e#1871#1872#0" expanded="true" />
+            <element signature="e#1891#1892#0" expanded="true" />
             <element signature="e#1917#1918#0" expanded="true" />
-            <element signature="e#1943#1944#0" expanded="true" />
-            <element signature="e#1962#1963#0" expanded="true" />
+            <element signature="e#1936#1937#0" expanded="true" />
+            <element signature="e#1966#1967#0" expanded="true" />
+            <element signature="e#1989#1990#0" expanded="true" />
+            <element signature="e#2015#2016#0" expanded="true" />
+            <element signature="e#2034#2035#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/stats/StatParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="8" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1938">
+        <state line="36" column="19" selection-start="1429" selection-end="1429" vertical-scroll-proportion="0.0" vertical-offset="158" max-vertical-offset="2023">
           <folding>
+            <element signature="e#0#3634#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -741,86 +752,93 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/types/OvercastPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="2" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
+        <state line="31" column="19" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.0" vertical-offset="277" max-vertical-offset="1020">
           <folding>
+            <element signature="e#0#1722#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#1546#1547#0" expanded="true" />
-            <element signature="e#1568#1569#0" expanded="true" />
-            <element signature="e#1601#1602#0" expanded="true" />
-            <element signature="e#1620#1621#0" expanded="true" />
+            <element signature="e#1644#1645#0" expanded="true" />
+            <element signature="e#1666#1667#0" expanded="true" />
+            <element signature="e#1699#1700#0" expanded="true" />
+            <element signature="e#1718#1719#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/stats/TeamStat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="2" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1377">
+        <state line="28" column="19" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.0" vertical-offset="277" max-vertical-offset="1411">
           <folding>
-            <element signature="e#1602#1603#0" expanded="true" />
-            <element signature="e#1618#1619#0" expanded="true" />
-            <element signature="e#1644#1645#0" expanded="true" />
-            <element signature="e#1660#1661#0" expanded="true" />
-            <element signature="e#1686#1687#0" expanded="true" />
-            <element signature="e#1705#1706#0" expanded="true" />
-            <element signature="e#1732#1733#0" expanded="true" />
-            <element signature="e#1752#1753#0" expanded="true" />
-            <element signature="e#1778#1779#0" expanded="true" />
-            <element signature="e#1797#1798#0" expanded="true" />
-            <element signature="e#1827#1828#0" expanded="true" />
-            <element signature="e#1850#1851#0" expanded="true" />
-            <element signature="e#1876#1877#0" expanded="true" />
-            <element signature="e#1895#1896#0" expanded="true" />
+            <element signature="e#0#1936#0" expanded="true" />
+            <element signature="e#1639#1640#0" expanded="true" />
+            <element signature="e#1655#1656#0" expanded="true" />
+            <element signature="e#1681#1682#0" expanded="true" />
+            <element signature="e#1697#1698#0" expanded="true" />
+            <element signature="e#1723#1724#0" expanded="true" />
+            <element signature="e#1742#1743#0" expanded="true" />
+            <element signature="e#1769#1770#0" expanded="true" />
+            <element signature="e#1789#1790#0" expanded="true" />
+            <element signature="e#1815#1816#0" expanded="true" />
+            <element signature="e#1834#1835#0" expanded="true" />
+            <element signature="e#1864#1865#0" expanded="true" />
+            <element signature="e#1887#1888#0" expanded="true" />
+            <element signature="e#1913#1914#0" expanded="true" />
+            <element signature="e#1932#1933#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/types/OvercastTeam.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="2" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224">
+        <state line="34" column="19" selection-start="1372" selection-end="1372" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1275">
           <folding>
+            <element signature="e#0#1963#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#1709#1710#0" expanded="true" />
-            <element signature="e#1727#1728#0" expanded="true" />
-            <element signature="e#1754#1755#0" expanded="true" />
-            <element signature="e#1771#1772#0" expanded="true" />
-            <element signature="e#1816#1817#0" expanded="true" />
-            <element signature="e#1837#1838#0" expanded="true" />
-            <element signature="e#1868#1869#0" expanded="true" />
-            <element signature="e#1887#1888#0" expanded="true" />
+            <element signature="e#1781#1782#0" expanded="true" />
+            <element signature="e#1799#1800#0" expanded="true" />
+            <element signature="e#1826#1827#0" expanded="true" />
+            <element signature="e#1843#1844#0" expanded="true" />
+            <element signature="e#1888#1889#0" expanded="true" />
+            <element signature="e#1909#1910#0" expanded="true" />
+            <element signature="e#1940#1941#0" expanded="true" />
+            <element signature="e#1959#1960#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/types/OvercastTournament.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="2" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
+        <state line="31" column="19" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0" vertical-offset="260" max-vertical-offset="1054">
           <folding>
-            <element signature="e#1488#1489#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1534#1535#0" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
-            <element signature="e#1582#1583#0" expanded="true" />
-            <element signature="e#1606#1607#0" expanded="true" />
+            <element signature="e#0#1756#0" expanded="true" />
+            <element signature="e#1634#1635#0" expanded="true" />
+            <element signature="e#1653#1654#0" expanded="true" />
+            <element signature="e#1680#1681#0" expanded="true" />
+            <element signature="e#1697#1698#0" expanded="true" />
+            <element signature="e#1728#1729#0" expanded="true" />
+            <element signature="e#1752#1753#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/types/TournamentTeam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="19" selection-start="1448" selection-end="1448" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1105">
+          <folding>
+            <element signature="e#0#1863#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1788#1789#0" expanded="true" />
+            <element signature="e#1809#1810#0" expanded="true" />
+            <element signature="e#1840#1841#0" expanded="true" />
+            <element signature="e#1859#1860#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/utils/NumberUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="2" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/types/TournamentTeam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="2" selection-start="518" selection-end="518" vertical-scroll-proportion="0.31323284" vertical-offset="0" max-vertical-offset="1020">
+        <state line="26" column="0" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.60134006" vertical-offset="83" max-vertical-offset="816">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1640#1641#0" expanded="true" />
-            <element signature="e#1661#1662#0" expanded="true" />
-            <element signature="e#1692#1693#0" expanded="true" />
-            <element signature="e#1711#1712#0" expanded="true" />
+            <element signature="e#0#1565#0" expanded="true" />
           </folding>
         </state>
       </provider>
