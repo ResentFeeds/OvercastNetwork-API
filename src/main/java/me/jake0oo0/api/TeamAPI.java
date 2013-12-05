@@ -48,10 +48,9 @@ public class TeamAPI {
 	 * Retrieve stats of an OvercastTeam
 	 *
 	 * @param url team url
-	 * @return ouput OvercastTeam
+	 * @return output OvercastTeam
 	 */
 	public OvercastTeam getOvercastTeam(String url) {
-		//TODO
-		return null;
+		return TeamParser.parseOvercastTeam(url);
 	}
 }
