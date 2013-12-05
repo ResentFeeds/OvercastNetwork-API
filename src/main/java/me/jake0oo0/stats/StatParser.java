@@ -10,7 +10,7 @@ import java.util.List;
 
 public class StatParser {
 
-	public PlayerStat parsePlayerStats(String user) {
+	public static PlayerStat parsePlayerStats(String user) {
 		String url = "https://oc.tc/" + user;
 		Document doc;
 
@@ -46,7 +46,7 @@ public class StatParser {
 
 	}
 
-	public TeamStat parseTournamentTeam(List<OvercastPlayer> players) {
+	public static TeamStat parseTournamentTeam(List<OvercastPlayer> players) {
 		Double kd = 0.0;
 		Double kk = 0.0;
 		int kills = 0;
@@ -78,7 +78,7 @@ public class StatParser {
 
 	}
 
-	public TeamStat parseOvercastTeam(List<OvercastPlayer> players) {
+	public static TeamStat parseOvercastTeam(List<OvercastPlayer> players) {
 		return parseTournamentTeam(players);
 	}
 

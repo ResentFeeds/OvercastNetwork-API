@@ -1,5 +1,6 @@
 package me.jake0oo0.types;
 
+import me.jake0oo0.stats.StatParser;
 import me.jake0oo0.stats.TeamStat;
 
 import java.util.List;
@@ -14,6 +15,10 @@ public class TournamentTeam {
 	public TournamentTeam(List<OvercastPlayer> players, TeamStat stats) {
 		this.players = players;
 		this.stats = stats;
+	}
+
+	public void parseStats() {
+		this.stats = StatParser.parseOvercastTeam(players);
 	}
 
 	public List<OvercastPlayer> getPlayers() {

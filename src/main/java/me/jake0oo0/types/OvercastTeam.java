@@ -1,5 +1,6 @@
 package me.jake0oo0.types;
 
+import me.jake0oo0.stats.StatParser;
 import me.jake0oo0.stats.TeamStat;
 
 import java.util.List;
@@ -18,6 +19,10 @@ public class OvercastTeam {
 		this.url = url;
 		this.players = players;
 		this.stats = stats;
+	}
+
+	public void parseStats() {
+		this.stats = StatParser.parseOvercastTeam(players);
 	}
 
 	public String getName() {
