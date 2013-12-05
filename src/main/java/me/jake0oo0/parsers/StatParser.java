@@ -21,8 +21,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package me.jake0oo0.stats;
+package me.jake0oo0.parsers;
 
+import me.jake0oo0.stats.PlayerStat;
+import me.jake0oo0.stats.TeamStat;
 import me.jake0oo0.utils.NumberUtils;
 import me.jake0oo0.types.OvercastPlayer;
 import org.jsoup.Jsoup;

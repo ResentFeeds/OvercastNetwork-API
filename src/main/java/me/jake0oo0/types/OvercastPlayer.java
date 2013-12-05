@@ -24,7 +24,7 @@
 package me.jake0oo0.types;
 
 import me.jake0oo0.stats.PlayerStat;
-import me.jake0oo0.stats.StatParser;
+import me.jake0oo0.parsers.StatParser;
 
 /**
  * Instance of an OvercastNetwork player, saves stats and username
