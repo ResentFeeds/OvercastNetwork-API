@@ -23,7 +23,9 @@
  */
 package me.jake0oo0.parsers;
 
+import me.jake0oo0.stats.TeamStat;
 import me.jake0oo0.types.OvercastPlayer;
+import me.jake0oo0.types.OvercastTeam;
 import me.jake0oo0.types.TournamentTeam;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -91,5 +93,64 @@ public class TeamParser {
 			players.add(new OvercastPlayer(p, StatParser.parsePlayerStats(p)));
 		}
 		return players;
+	}
+
+	public static OvercastTeam parseOvercastTeam(String url) {
+		Document doc;
+		TeamStat stats = null;
+		String name = null;
+		List<OvercastPlayer> players = new ArrayList<OvercastPlayer>();
+
+		try {
+			doc = Jsoup.connect(url)
+					.userAgent("Mozilla")
+					.get();
+
+			Elements title = doc.select("h1");
+
+			name = title.first().text();
+
+
+			Elements texts = doc.select("div[class]");
+
+			for (Element text : texts) {
+				if (text.text().startsWith("Stats")) {
+					stats = parseTeamStatsString(text.text());
+					break;
+				}
+			}
+
+			Elements playerElements = doc.select("tr").select("td").select("a");
+
+			for (Element playerElement : playerElements) {
+				players.add(new OvercastPlayer(playerElement.text()));
+			}
+
+
+		} catch (IOException e) {
+			System.out.println("Error parsing team: " + url);
+		}
+
+		return new OvercastTeam(name, url, players, stats);
+	}
+
+	public static TeamStat parseTeamStatsString(String string) {
+		String work = string;
+
+		work = work.replace("Stats ", "").replace("Wools", "").replace("Cores", "").replace("Monuments", "")
+				.replace("KK ratio", "").replace("KD ratio", "").replace("Kills", "").replace("Deaths", "").replace("  ", " ").trim();
+
+		String[] arr = work.split(" ");
+
+		int wools = Integer.parseInt(arr[0]);
+		int cores = Integer.parseInt(arr[1]);
+		int monuments = Integer.parseInt(arr[2]);
+		Double kk = Double.parseDouble(arr[3]);
+		Double kd = Double.parseDouble(arr[4]);
+		int kills = Integer.parseInt(arr[5]);
+		int deaths = Integer.parseInt(arr[6]);
+
+		return new TeamStat(kd, kk, kills, deaths, cores, monuments, wools);
+
 	}
 }

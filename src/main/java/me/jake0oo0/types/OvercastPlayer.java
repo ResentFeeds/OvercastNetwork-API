@@ -46,6 +46,11 @@ public class OvercastPlayer {
 		this.stats = stats;
 	}
 
+	public OvercastPlayer(String username) {
+		this.username = username;
+		parseStats();
+	}
+
 	public void parseStats() {
 		this.stats = StatParser.parsePlayerStats(getUsername());
 	}
