@@ -6,11 +6,9 @@ import java.util.List;
  * Created by jake on 12/4/13.
  */
 public class OvercastTeam {
+	String name;
+	String url;
 	List<OvercastPlayer> players;
 	TeamStat stats;
 
-	public OvercastTeam(List<OvercastPlayer> players, TeamStat stats) {
-		this.players = players;
-		this.stats = stats;
-	}
 }
