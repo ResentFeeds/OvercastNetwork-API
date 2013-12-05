@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="639a1328-dbe1-478b-a570-de13bc2675fa" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\jake\Documents\Development\OvercastWebAPI\src\main\java\me\jake0oo0\API.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jake\Documents\Development\OvercastWebAPI\src\main\java\me\jake0oo0\NumberUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jake\Documents\Development\OvercastWebAPI\src\main\java\me\jake0oo0\OvercastPlayer.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jake\Documents\Development\OvercastWebAPI\src\main\java\me\jake0oo0\OvercastTeam.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jake\Documents\Development\OvercastWebAPI\src\main\java\me\jake0oo0\OvercastTournament.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jake\Documents\Development\OvercastWebAPI\src\main\java\me\jake0oo0\PlayerStat.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jake\Documents\Development\OvercastWebAPI\src\main\java\me\jake0oo0\StatParser.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jake\Documents\Development\OvercastWebAPI\src\main\java\me\jake0oo0\TeamStat.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jake\Documents\Development\OvercastWebAPI\src\main\java\me\jake0oo0\TournamentTeam.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="639a1328-dbe1-478b-a570-de13bc2675fa" name="Default" comment="" />
     <ignored path="OvercastWebAPI.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -168,7 +156,7 @@
       <file leaf-file-name="PlayerStat.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/stats/PlayerStat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="31" selection-start="331" selection-end="331" vertical-scroll-proportion="0.42713568" vertical-offset="0" max-vertical-offset="1037">
+            <state line="16" column="27" selection-start="353" selection-end="353" vertical-scroll-proportion="0.45561138" vertical-offset="0" max-vertical-offset="1037">
               <folding>
                 <element signature="e#479#480#0" expanded="true" />
                 <element signature="e#495#496#0" expanded="true" />
@@ -635,7 +623,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1310" height="786" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -653,7 +641,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2496" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2496" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -798,7 +786,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/jake0oo0/stats/PlayerStat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="31" selection-start="331" selection-end="331" vertical-scroll-proportion="0.42713568" vertical-offset="0" max-vertical-offset="1037">
+        <state line="16" column="27" selection-start="353" selection-end="353" vertical-scroll-proportion="0.45561138" vertical-offset="0" max-vertical-offset="1037">
           <folding>
             <element signature="e#479#480#0" expanded="true" />
             <element signature="e#495#496#0" expanded="true" />
