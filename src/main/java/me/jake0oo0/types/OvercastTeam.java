@@ -40,6 +40,14 @@ public class OvercastTeam {
 	List<OvercastPlayer> players;
 	TeamStat stats;
 
+	/**
+	 * OvercastNetwork league team instance
+	 *
+	 * @param name name of team
+	 * @param url url of team
+	 * @param players list of team players
+	 * @param stats team stats
+	 */
 	public OvercastTeam(String name, String url, List<OvercastPlayer> players, TeamStat stats) {
 		this.name = name;
 		this.url = url;

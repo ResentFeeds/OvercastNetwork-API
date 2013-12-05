@@ -37,6 +37,17 @@ public class TeamStat {
 	int monuments;
 	int wools;
 
+	/**
+	 * A team's stats - most stats are totaled, unless specified
+	 *
+	 * @param kd team's average kill to death ratio
+	 * @param kk team's average kill to kill ratio
+	 * @param kills number of kills
+	 * @param deaths number of deaths
+	 * @param cores number of cores
+	 * @param monuments number of monuments
+	 * @param wools number of wools
+	 */
 	public TeamStat(Double kd, Double kk, int kills, int deaths, int cores, int monuments, int wools) {
 		this.kd = kd;
 		this.kk = kk;

@@ -40,6 +40,12 @@ public class TournamentTeam {
 	List<OvercastPlayer> players;
 	TeamStat stats;
 
+	/**
+	 * A list of players, and the team's stats
+	 *
+	 * @param players Team players
+	 * @param stats Team stats
+	 */
 	public TournamentTeam(List<OvercastPlayer> players, TeamStat stats) {
 		this.players = players;
 		this.stats = stats;

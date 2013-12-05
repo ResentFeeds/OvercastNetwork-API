@@ -36,6 +36,13 @@ public class OvercastTournament {
 	String url;
 	int minPlayers;
 
+	/**
+	 * Tournament instance
+	 *
+	 * @param teams List of partaking teams
+	 * @param url tourney url
+	 * @param minPlayers minimum players per team
+	 */
 	public OvercastTournament(List<TournamentTeam> teams, String url, int minPlayers) {
 		this.teams = teams;
 		this.url = url;

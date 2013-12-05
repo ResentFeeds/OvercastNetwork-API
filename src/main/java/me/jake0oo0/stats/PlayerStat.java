@@ -38,6 +38,18 @@ public class PlayerStat {
 	int monuments;
 	int wools;
 
+	/**
+	 * A player's stats
+	 *
+	 * @param kd player's kill to death ratio
+	 * @param kk player's kill to kill ratio
+	 * @param friends number of friends
+	 * @param kills number of kills
+	 * @param deaths number of deaths
+	 * @param cores number of cores
+	 * @param monuments number of monuments
+	 * @param wools number of wools
+	 */
 	public PlayerStat(Double kd, Double kk, int friends, int kills, int deaths, int cores, int monuments, int wools) {
 		this.kd = kd;
 		this.kk = kk;

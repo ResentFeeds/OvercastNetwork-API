@@ -38,6 +38,12 @@ import java.util.List;
  */
 public class StatParser {
 
+	/**
+	 * Parse the profile of the user param
+	 *
+	 * @param user the user to parse
+	 * @return a PlayerStat with the player's stats
+	 */
 	public static PlayerStat parsePlayerStats(String user) {
 		String url = "https://oc.tc/" + user;
 		Document doc;
@@ -74,6 +80,12 @@ public class StatParser {
 
 	}
 
+	/**
+	 * Parse a tournament team
+	 *
+	 * @param players Input team players
+	 * @return a TeamStat with all player stats calculated
+	 */
 	public static TeamStat parseTournamentTeam(List<OvercastPlayer> players) {
 		Double kd = 0.0;
 		Double kk = 0.0;

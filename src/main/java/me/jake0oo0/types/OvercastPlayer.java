@@ -35,6 +35,12 @@ public class OvercastPlayer {
 	String username;
 	PlayerStat stats;
 
+	/**
+	 * OvercastNetwork player instance
+	 *
+	 * @param username player's username
+	 * @param stats player's stats
+	 */
 	public OvercastPlayer(String username, PlayerStat stats) {
 		this.username = username;
 		this.stats = stats;
