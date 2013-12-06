@@ -14,7 +14,7 @@ To use this API with maven add the following to your pom.xml:
 <dependency>
 	 <groupId>me.jake0oo0</groupId>
 	<artifactId>overcastwebapi</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.2-SNAPSHOT</version>
 </dependency>
 ```
 
