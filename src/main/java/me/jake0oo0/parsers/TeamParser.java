@@ -95,6 +95,13 @@ public class TeamParser {
 		return players;
 	}
 
+	/**
+	 * Creates an overcast team from the url
+	 * THIS METHOD DOES NOT PARSE USER STATS, ONLY GETS THE USER
+	 *
+	 * @param url
+	 * @return
+	 */
 	public static OvercastTeam parseOvercastTeam(String url) {
 		Document doc;
 		TeamStat stats = null;
