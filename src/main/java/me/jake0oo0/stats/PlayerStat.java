@@ -31,6 +31,7 @@ package me.jake0oo0.stats;
 public class PlayerStat {
 	Double kd;
 	Double kk;
+    int raindrops;
 	int friends;
 	int kills;
 	int deaths;
@@ -50,10 +51,11 @@ public class PlayerStat {
 	 * @param monuments number of monuments
 	 * @param wools number of wools
 	 */
-	public PlayerStat(Double kd, Double kk, int friends, int kills, int deaths, int cores, int monuments, int wools) {
+	public PlayerStat(Double kd, Double kk, int raindrops, int friends, int kills, int deaths, int cores, int monuments, int wools) {
 		this.kd = kd;
 		this.kk = kk;
 		this.friends = friends;
+        this.raindrops = raindrops;
 		this.kills = kills;
 		this.deaths = deaths;
 		this.cores = cores;
@@ -92,4 +94,8 @@ public class PlayerStat {
 	public int getWools() {
 		return wools;
 	}
+
+    public int getRaindrops() {
+        return raindrops;
+    }
 }

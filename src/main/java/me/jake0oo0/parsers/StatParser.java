@@ -54,6 +54,7 @@ public class StatParser {
 		Double kk = 0.0;
 		int friends = 0;
 		int kills = 0;
+        int raindrops = 0;
 		int deaths = 0;
 		int cores = 0;
 		int monuments = 0;
@@ -71,13 +72,15 @@ public class StatParser {
 			monuments = Integer.parseInt(doc.select("div[class=span4]").select("h2").get(3).text().split(" ")[0]);
 			kd = Double.parseDouble(doc.select("div[class=span3]").select("h2").get(0).text().split(" ")[0]);
 			kk = Double.parseDouble(doc.select("div[class=span3]").select("h2").get(1).text().split(" ")[0]);
-			return new PlayerStat(kd, kk, friends, kills, deaths, cores, monuments, wools);
+            raindrops = Integer.parseInt(doc.select("div[class=span3]").select("h2").get(5).text().split(" ")[0]);
+
+            return new PlayerStat(kd, kk, raindrops, friends, kills, deaths, cores, monuments, wools);
 
 
 		} catch (IOException e) {
 			System.out.println("Unable to parse player stats for URL: " + url);
 		}
-		return new PlayerStat(kd, kk, friends, kills, deaths, cores, monuments, wools);
+		return new PlayerStat(kd, kk, raindrops, friends, kills, deaths, cores, monuments, wools);
 
 
 	}
