@@ -62,8 +62,10 @@ public class StatParser {
 		try {
 
 			doc = Jsoup.connect(url)
+                    .timeout(0)
 					.userAgent("Mozilla")
 					.get();
+
 
 			kills = Integer.parseInt(doc.select("div[class=span5]").select("h2").first().text().split(" ")[0]);
 			deaths = Integer.parseInt(doc.select("div[class=span4]").select("h2").first().text().split(" ")[0]);
@@ -72,7 +74,7 @@ public class StatParser {
 			monuments = Integer.parseInt(doc.select("div[class=span4]").select("h2").get(3).text().split(" ")[0]);
 			kd = Double.parseDouble(doc.select("div[class=span3]").select("h2").get(0).text().split(" ")[0]);
 			kk = Double.parseDouble(doc.select("div[class=span3]").select("h2").get(1).text().split(" ")[0]);
-            raindrops = Integer.parseInt(doc.select("div[class=span3]").select("h2").get(5).text().split(" ")[0]);
+            //raindrops = Integer.parseInt(doc.select("div[class=span3]").select("h2").get(5).text().split(" ")[0]);
 
             return new PlayerStat(kd, kk, raindrops, friends, kills, deaths, cores, monuments, wools);
 

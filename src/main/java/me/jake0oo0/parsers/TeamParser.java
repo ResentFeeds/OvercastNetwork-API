@@ -43,121 +43,127 @@ import java.util.List;
  */
 public class TeamParser {
 
-	public static TournamentTeam parseTournamentTeam(String tourneyUrl, String teamName) {
+    public static TournamentTeam parseTournamentTeam(String tourneyUrl, String teamName) {
 
-		Document doc;
-		try {
-			doc = Jsoup.connect(tourneyUrl)
-					.userAgent("Mozilla")
-					.get();
-			List<String> teamNames = new ArrayList<String>();
-			Elements names = doc.select("a[href]");
-			for (Element name : names) {
-				if (name.attr("href").startsWith("/teams/")) {
-					teamNames.add(name.text());
-				}
-			}
+        Document doc;
+        try {
+            doc = Jsoup.connect(tourneyUrl)
+                    .userAgent("Mozilla")
+                    .get();
+            List<String> teamNames = new ArrayList<String>();
+            Elements names = doc.select("a[href]");
+            for (Element name : names) {
+                if (name.attr("href").startsWith("/teams/")) {
+                    teamNames.add(name.text());
+                }
+            }
 
-			Elements links = doc.select("td[title]");
-			int n = 0;
+            Elements links = doc.select("td[title]");
+            int n = 0;
 
-			for (int i = 0; i < links.size(); i += 2) {
-				String name = teamNames.get(n);
-				if (name.equals(teamName)) {
-					List<OvercastPlayer> players = getPlayerObjectList(links.get(i).attr("title"));
-					return new TournamentTeam(players, StatParser.parseTournamentTeam(players));
-				}
+            for (int i = 0; i < links.size(); i += 2) {
+                String name = teamNames.get(n);
+                if (name.equals(teamName)) {
+                    List<OvercastPlayer> players = getPlayerObjectList(links.get(i).attr("title"));
+                    return new TournamentTeam(name, players, StatParser.parseTournamentTeam(players));
+                }
 
-				n++;
-			}
-		} catch (IOException e) {
-			System.out.println("Error parsing tournament team: " + teamName);
-		}
-		return null;
-	}
+                n++;
+            }
+        } catch (IOException e) {
+            System.out.println("Error parsing tournament team: " + teamName);
+        }
+        return null;
+    }
 
-	public static List<String> parsePlayers(String s) {
-		String[] arr = s.replace(", and ", ", ").replaceAll(" and ", ", ").split(", ");
-		List<String> strings = new ArrayList<String>();
-		for (String string : arr) {
-			strings.add(string);
-		}
+    public static List<String> parsePlayers(String s) {
+        String[] arr = s.replace(", and ", ", ").replaceAll(" and ", ", ").split(", ");
+        List<String> strings = new ArrayList<String>();
+        for (String string : arr) {
+            strings.add(string);
+        }
 
-		return strings;
-	}
+        return strings;
+    }
 
-	public static List<OvercastPlayer> getPlayerObjectList(String s) {
-		List<String> strings = parsePlayers(s);
-		List<OvercastPlayer> players = new ArrayList<OvercastPlayer>();
-		for (String p : strings) {
-			players.add(new OvercastPlayer(p, StatParser.parsePlayerStats(p)));
-		}
-		return players;
-	}
+    /**
+     * Gets a player list, players' stats are null
+     *
+     * @param s
+     * @return
+     */
+    public static List<OvercastPlayer> getPlayerObjectList(String s) {
+        List<String> strings = parsePlayers(s);
+        List<OvercastPlayer> players = new ArrayList<OvercastPlayer>();
+        for (String p : strings) {
+            players.add(new OvercastPlayer(p, null));
+        }
+        return players;
+    }
 
-	/**
-	 * Creates an overcast team from the url
-	 * THIS METHOD DOES NOT PARSE USER STATS, ONLY GETS THE USER
-	 *
-	 * @param url
-	 * @return
-	 */
-	public static OvercastTeam parseOvercastTeam(String url) {
-		Document doc;
-		TeamStat stats = null;
-		String name = null;
-		List<OvercastPlayer> players = new ArrayList<OvercastPlayer>();
+    /**
+     * Creates an overcast team from the url
+     * THIS METHOD DOES NOT PARSE USER STATS, ONLY GETS THE USER
+     *
+     * @param url
+     * @return
+     */
+    public static OvercastTeam parseOvercastTeam(String url) {
+        Document doc;
+        TeamStat stats = null;
+        String name = null;
+        List<OvercastPlayer> players = new ArrayList<OvercastPlayer>();
 
-		try {
-			doc = Jsoup.connect(url)
-					.userAgent("Mozilla")
-					.get();
+        try {
+            doc = Jsoup.connect(url)
+                    .userAgent("Mozilla")
+                    .get();
 
-			Elements title = doc.select("h1");
+            Elements title = doc.select("h1");
 
-			name = title.first().text();
-
-
-			Elements texts = doc.select("div[class]");
-
-			for (Element text : texts) {
-				if (text.text().startsWith("Stats")) {
-					stats = parseTeamStatsString(text.text());
-					break;
-				}
-			}
-
-			Elements playerElements = doc.select("tr").select("td").select("a");
-
-			for (Element playerElement : playerElements) {
-				players.add(new OvercastPlayer(playerElement.text()));
-			}
+            name = title.first().text();
 
 
-		} catch (IOException e) {
-			System.out.println("Error parsing team: " + url);
-		}
+            Elements texts = doc.select("div[class]");
 
-		return new OvercastTeam(name, url, players, stats);
-	}
+            for (Element text : texts) {
+                if (text.text().startsWith("Stats")) {
+                    stats = parseTeamStatsString(text.text());
+                    break;
+                }
+            }
 
-	public static TeamStat parseTeamStatsString(String string) {
-		String work = string;
+            Elements playerElements = doc.select("tr").select("td").select("a");
 
-		work = work.replace("Stats ", "").replace("Wools", "").replace("Cores", "").replace("Monuments", "")
-				.replace("KK ratio", "").replace("KD ratio", "").replace("Kills", "").replace("Deaths", "").replace("  ", " ").trim();
+            for (Element playerElement : playerElements) {
+                players.add(new OvercastPlayer(playerElement.text()));
+            }
 
-		String[] arr = work.split(" ");
 
-		int wools = Integer.parseInt(arr[0]);
-		int cores = Integer.parseInt(arr[1]);
-		int monuments = Integer.parseInt(arr[2]);
-		Double kk = Double.parseDouble(arr[3]);
-		Double kd = Double.parseDouble(arr[4]);
-		int kills = Integer.parseInt(arr[5]);
-		int deaths = Integer.parseInt(arr[6]);
+        } catch (IOException e) {
+            System.out.println("Error parsing team: " + url);
+        }
 
-		return new TeamStat(kd, kk, kills, deaths, cores, monuments, wools);
+        return new OvercastTeam(name, url, players, stats);
+    }
 
-	}
+    public static TeamStat parseTeamStatsString(String string) {
+        String work = string;
+
+        work = work.replace("Stats ", "").replace("Wools", "").replace("Cores", "").replace("Monuments", "")
+                .replace("KK ratio", "").replace("KD ratio", "").replace("Kills", "").replace("Deaths", "").replace("  ", " ").trim();
+
+        String[] arr = work.split(" ");
+
+        int wools = Integer.parseInt(arr[0]);
+        int cores = Integer.parseInt(arr[1]);
+        int monuments = Integer.parseInt(arr[2]);
+        Double kk = Double.parseDouble(arr[3]);
+        Double kd = Double.parseDouble(arr[4]);
+        int kills = Integer.parseInt(arr[5]);
+        int deaths = Integer.parseInt(arr[6]);
+
+        return new TeamStat(kd, kk, kills, deaths, cores, monuments, wools);
+
+    }
 }

@@ -37,6 +37,7 @@ import java.util.List;
  * @author Jake0oo0
  */
 public class TournamentTeam {
+    String name;
 	List<OvercastPlayer> players;
 	TeamStat stats;
 
@@ -46,7 +47,8 @@ public class TournamentTeam {
 	 * @param players Team players
 	 * @param stats Team stats
 	 */
-	public TournamentTeam(List<OvercastPlayer> players, TeamStat stats) {
+	public TournamentTeam(String name, List<OvercastPlayer> players, TeamStat stats) {
+        this.name = name;
 		this.players = players;
 		this.stats = stats;
 	}
@@ -62,4 +64,8 @@ public class TournamentTeam {
 	public TeamStat getStats() {
 		return stats;
 	}
+
+    public String getName() {
+        return name;
+    }
 }
