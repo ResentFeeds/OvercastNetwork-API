@@ -81,6 +81,7 @@ public class StatParser {
 
 		} catch (IOException e) {
 			System.out.println("Unable to parse player stats for URL: " + url);
+            e.printStackTrace();
 		}
 		return new PlayerStat(kd, kk, raindrops, friends, kills, deaths, cores, monuments, wools);
 
