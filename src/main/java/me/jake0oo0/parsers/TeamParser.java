@@ -27,6 +27,7 @@ import me.jake0oo0.stats.TeamStat;
 import me.jake0oo0.types.OvercastPlayer;
 import me.jake0oo0.types.OvercastTeam;
 import me.jake0oo0.types.TournamentTeam;
+import me.jake0oo0.utils.ParseException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -34,6 +35,7 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -43,8 +45,7 @@ import java.util.List;
  */
 public class TeamParser {
 
-    public static TournamentTeam parseTournamentTeam(String tourneyUrl, String teamName) {
-
+    public static TournamentTeam parseTournamentTeam(String tourneyUrl, String teamName) throws ParseException {
         Document doc;
         try {
             doc = Jsoup.connect(tourneyUrl)
@@ -71,7 +72,7 @@ public class TeamParser {
                 n++;
             }
         } catch (IOException e) {
-            System.out.println("Error parsing tournament team: " + teamName);
+            throw new ParseException("Error parsing team: " + teamName);
         }
         return null;
     }
@@ -79,9 +80,7 @@ public class TeamParser {
     public static List<String> parsePlayers(String s) {
         String[] arr = s.replace(", and ", ", ").replaceAll(" and ", ", ").split(", ");
         List<String> strings = new ArrayList<String>();
-        for (String string : arr) {
-            strings.add(string);
-        }
+        Collections.addAll(strings, arr);
 
         return strings;
     }
@@ -89,11 +88,11 @@ public class TeamParser {
     /**
      * Gets a player list, players' stats are null
      *
-     * @param s
-     * @return
+     * @param string string to parse
+     * @return a list of overcast players parsed from the string
      */
-    public static List<OvercastPlayer> getPlayerObjectList(String s) {
-        List<String> strings = parsePlayers(s);
+    public static List<OvercastPlayer> getPlayerObjectList(String string) {
+        List<String> strings = parsePlayers(string);
         List<OvercastPlayer> players = new ArrayList<OvercastPlayer>();
         for (String p : strings) {
             players.add(new OvercastPlayer(p, null));
@@ -103,15 +102,14 @@ public class TeamParser {
 
     /**
      * Creates an overcast team from the url
-     * THIS METHOD DOES NOT PARSE USER STATS, ONLY GETS THE USER
      *
-     * @param url
-     * @return
+     * @param url url of the player
+     * @return OvercastTeam parsed
      */
-    public static OvercastTeam parseOvercastTeam(String url) {
+    public static OvercastTeam parseOvercastTeam(String url, boolean parseStats) throws ParseException {
         Document doc;
         TeamStat stats = null;
-        String name = null;
+        String name;
         List<OvercastPlayer> players = new ArrayList<OvercastPlayer>();
 
         try {
@@ -120,30 +118,25 @@ public class TeamParser {
                     .get();
 
             Elements title = doc.select("h1");
-
             name = title.first().text();
-
-
             Elements texts = doc.select("div[class]");
 
-            for (Element text : texts) {
-                if (text.text().startsWith("Stats")) {
-                    stats = parseTeamStatsString(text.text());
-                    break;
+            if (parseStats) {
+                for (Element text : texts) {
+                    if (text.text().startsWith("Stats")) {
+                        stats = parseTeamStatsString(text.text());
+                        break;
+                    }
                 }
             }
 
             Elements playerElements = doc.select("tr").select("td").select("a");
-
             for (Element playerElement : playerElements) {
                 players.add(new OvercastPlayer(playerElement.text()));
             }
-
-
         } catch (IOException e) {
-            System.out.println("Error parsing team: " + url);
+            throw new ParseException("Error parsing OvercastTeam: " + url);
         }
-
         return new OvercastTeam(name, url, players, stats);
     }
 

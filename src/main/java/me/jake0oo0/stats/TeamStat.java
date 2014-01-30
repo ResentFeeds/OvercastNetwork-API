@@ -29,60 +29,60 @@ package me.jake0oo0.stats;
  * @author Jake0oo0
  */
 public class TeamStat {
-	Double kd;
-	Double kk;
-	int kills;
-	int deaths;
-	int cores;
-	int monuments;
-	int wools;
+    Double kd;
+    Double kk;
+    int kills;
+    int deaths;
+    int cores;
+    int monuments;
+    int wools;
 
-	/**
-	 * A team's stats - most stats are totaled, unless specified
-	 *
-	 * @param kd team's average kill to death ratio
-	 * @param kk team's average kill to kill ratio
-	 * @param kills number of kills
-	 * @param deaths number of deaths
-	 * @param cores number of cores
-	 * @param monuments number of monuments
-	 * @param wools number of wools
-	 */
-	public TeamStat(Double kd, Double kk, int kills, int deaths, int cores, int monuments, int wools) {
-		this.kd = kd;
-		this.kk = kk;
-		this.kills = kills;
-		this.deaths = deaths;
-		this.cores = cores;
-		this.monuments = monuments;
-		this.wools = wools;
-	}
+    /**
+     * A team's stats - most stats are totaled, unless specified
+     *
+     * @param kd        team's average kill to death ratio
+     * @param kk        team's average kill to kill ratio
+     * @param kills     number of kills
+     * @param deaths    number of deaths
+     * @param cores     number of cores
+     * @param monuments number of monuments
+     * @param wools     number of wools
+     */
+    public TeamStat(Double kd, Double kk, int kills, int deaths, int cores, int monuments, int wools) {
+        this.kd = kd;
+        this.kk = kk;
+        this.kills = kills;
+        this.deaths = deaths;
+        this.cores = cores;
+        this.monuments = monuments;
+        this.wools = wools;
+    }
 
-	public Double getKd() {
-		return kd;
-	}
+    public Double getKd() {
+        return kd;
+    }
 
-	public Double getKk() {
-		return kk;
-	}
+    public Double getKk() {
+        return kk;
+    }
 
-	public int getKills() {
-		return kills;
-	}
+    public int getKills() {
+        return kills;
+    }
 
-	public int getDeaths() {
-		return deaths;
-	}
+    public int getDeaths() {
+        return deaths;
+    }
 
-	public int getCores() {
-		return cores;
-	}
+    public int getCores() {
+        return cores;
+    }
 
-	public int getMonuments() {
-		return monuments;
-	}
+    public int getMonuments() {
+        return monuments;
+    }
 
-	public int getWools() {
-		return wools;
-	}
+    public int getWools() {
+        return wools;
+    }
 }

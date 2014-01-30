@@ -31,15 +31,14 @@ import me.jake0oo0.types.OvercastTournament;
  * @author Jake0oo0
  */
 public class TournamentAPI {
-
-	/**
-	 * Get an instance of an OvercastTournament
-	 *
-	 * @param url tourney url
-	 * @return an OvercastTournament from the url
-	 */
-	public OvercastTournament getTournament(String url) {
-		//TODO
-		return null;
-	}
+    /**
+     * Get an instance of an OvercastTournament
+     *
+     * @param url tourney url
+     * @return an OvercastTournament from the url
+     */
+    public OvercastTournament getTournament(String url) {
+        //TODO
+        return null;
+    }
 }

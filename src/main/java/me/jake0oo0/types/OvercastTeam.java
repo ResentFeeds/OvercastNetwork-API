@@ -35,43 +35,43 @@ import java.util.List;
  * @author Jake0oo0
  */
 public class OvercastTeam {
-	String name;
-	String url;
-	List<OvercastPlayer> players;
-	TeamStat stats;
+    String name;
+    String url;
+    List<OvercastPlayer> players;
+    TeamStat stats;
 
-	/**
-	 * OvercastNetwork league team instance
-	 *
-	 * @param name name of team
-	 * @param url url of team
-	 * @param players list of team players
-	 * @param stats team stats
-	 */
-	public OvercastTeam(String name, String url, List<OvercastPlayer> players, TeamStat stats) {
-		this.name = name;
-		this.url = url;
-		this.players = players;
-		this.stats = stats;
-	}
+    /**
+     * OvercastNetwork league team instance
+     *
+     * @param name    name of team
+     * @param url     url of team
+     * @param players list of team players
+     * @param stats   team stats
+     */
+    public OvercastTeam(String name, String url, List<OvercastPlayer> players, TeamStat stats) {
+        this.name = name;
+        this.url = url;
+        this.players = players;
+        this.stats = stats;
+    }
 
-	public void parseStats() {
-		this.stats = StatParser.parseOvercastTeam(getPlayers());
-	}
+    public void parseStats() {
+        this.stats = StatParser.parseOvercastTeam(getPlayers());
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getUrl() {
-		return url;
-	}
+    public String getUrl() {
+        return url;
+    }
 
-	public List<OvercastPlayer> getPlayers() {
-		return players;
-	}
+    public List<OvercastPlayer> getPlayers() {
+        return players;
+    }
 
-	public TeamStat getStats() {
-		return stats;
-	}
+    public TeamStat getStats() {
+        return stats;
+    }
 }

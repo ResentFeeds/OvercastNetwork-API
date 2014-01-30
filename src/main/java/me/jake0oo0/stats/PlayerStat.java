@@ -29,71 +29,71 @@ package me.jake0oo0.stats;
  * @author Jake0oo0
  */
 public class PlayerStat {
-	Double kd;
-	Double kk;
+    Double kd;
+    Double kk;
     int raindrops;
-	int friends;
-	int kills;
-	int deaths;
-	int cores;
-	int monuments;
-	int wools;
+    int friends;
+    int kills;
+    int deaths;
+    int cores;
+    int monuments;
+    int wools;
 
-	/**
-	 * A player's stats
-	 *
-	 * @param kd player's kill to death ratio
-	 * @param kk player's kill to kill ratio
-	 * @param friends number of friends
-	 * @param kills number of kills
-	 * @param deaths number of deaths
-	 * @param cores number of cores
-	 * @param monuments number of monuments
-	 * @param wools number of wools
-	 */
-	public PlayerStat(Double kd, Double kk, int raindrops, int friends, int kills, int deaths, int cores, int monuments, int wools) {
-		this.kd = kd;
-		this.kk = kk;
-		this.friends = friends;
+    /**
+     * A player's stats
+     *
+     * @param kd        player's kill to death ratio
+     * @param kk        player's kill to kill ratio
+     * @param friends   number of friends
+     * @param kills     number of kills
+     * @param deaths    number of deaths
+     * @param cores     number of cores
+     * @param monuments number of monuments
+     * @param wools     number of wools
+     */
+    public PlayerStat(Double kd, Double kk, int raindrops, int friends, int kills, int deaths, int cores, int monuments, int wools) {
+        this.kd = kd;
+        this.kk = kk;
+        this.friends = friends;
         this.raindrops = raindrops;
-		this.kills = kills;
-		this.deaths = deaths;
-		this.cores = cores;
-		this.monuments = monuments;
-		this.wools = wools;
-	}
+        this.kills = kills;
+        this.deaths = deaths;
+        this.cores = cores;
+        this.monuments = monuments;
+        this.wools = wools;
+    }
 
-	public Double getKd() {
-		return kd;
-	}
+    public Double getKd() {
+        return kd;
+    }
 
-	public Double getKk() {
-		return kk;
-	}
+    public Double getKk() {
+        return kk;
+    }
 
-	public int getFriends() {
-		return friends;
-	}
+    public int getFriends() {
+        return friends;
+    }
 
-	public int getKills() {
-		return kills;
-	}
+    public int getKills() {
+        return kills;
+    }
 
-	public int getDeaths() {
-		return deaths;
-	}
+    public int getDeaths() {
+        return deaths;
+    }
 
-	public int getCores() {
-		return cores;
-	}
+    public int getCores() {
+        return cores;
+    }
 
-	public int getMonuments() {
-		return monuments;
-	}
+    public int getMonuments() {
+        return monuments;
+    }
 
-	public int getWools() {
-		return wools;
-	}
+    public int getWools() {
+        return wools;
+    }
 
     public int getRaindrops() {
         return raindrops;

@@ -23,8 +23,11 @@
  */
 package me.jake0oo0.types;
 
-import me.jake0oo0.stats.PlayerStat;
 import me.jake0oo0.parsers.StatParser;
+import me.jake0oo0.stats.PlayerStat;
+import me.jake0oo0.utils.ParseException;
+
+import java.io.IOException;
 
 /**
  * Instance of an OvercastNetwork player, saves stats and username
@@ -32,34 +35,34 @@ import me.jake0oo0.parsers.StatParser;
  * @author Jake0oo0
  */
 public class OvercastPlayer {
-	String username;
-	PlayerStat stats;
+    String username;
+    PlayerStat stats;
 
-	/**
-	 * OvercastNetwork player instance
-	 *
-	 * @param username player's username
-	 * @param stats player's stats
-	 */
-	public OvercastPlayer(String username, PlayerStat stats) {
-		this.username = username;
-		this.stats = stats;
-	}
+    /**
+     * OvercastNetwork player instance
+     *
+     * @param username player's username
+     * @param stats    player's stats
+     */
+    public OvercastPlayer(String username, PlayerStat stats) {
+        this.username = username;
+        this.stats = stats;
+    }
 
-	public OvercastPlayer(String username) {
-		this.username = username;
-		parseStats();
-	}
+    public OvercastPlayer(String username) throws ParseException, IOException {
+        this.username = username;
+        parseStats();
+    }
 
-	public void parseStats() {
-		this.stats = StatParser.parsePlayerStats(getUsername());
-	}
+    public void parseStats() throws ParseException, IOException {
+        this.stats = StatParser.parsePlayerStats(getUsername());
+    }
 
-	public String getUsername() {
-		return username;
-	}
+    public String getUsername() {
+        return username;
+    }
 
-	public PlayerStat getStats() {
-		return stats;
-	}
+    public PlayerStat getStats() {
+        return stats;
+    }
 }

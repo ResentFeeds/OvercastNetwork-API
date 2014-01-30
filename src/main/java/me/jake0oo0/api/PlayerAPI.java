@@ -24,6 +24,9 @@
 package me.jake0oo0.api;
 
 import me.jake0oo0.types.OvercastPlayer;
+import me.jake0oo0.utils.ParseException;
+
+import java.io.IOException;
 
 /**
  * Class for managing the retrieval of player objects
@@ -31,27 +34,27 @@ import me.jake0oo0.types.OvercastPlayer;
  * @author Jake0oo0
  */
 public class PlayerAPI {
-	/**
-	 * Get an instance of an OvercastNetwork player
-	 *
-	 * @param user username
-	 * @return OvercastPlayer object from params
-	 */
-	public OvercastPlayer getPlayer(String user) {
-		OvercastPlayer player = new OvercastPlayer(user, null);
-		player.parseStats();
-		return player;
+    /**
+     * Get an instance of an OvercastNetwork player
+     *
+     * @param user username
+     * @return OvercastPlayer object from params
+     */
+    public OvercastPlayer getPlayer(String user) throws ParseException, IOException {
+        OvercastPlayer player = new OvercastPlayer(user, null);
+        player.parseStats();
+        return player;
 
-	}
+    }
 
-	/**
-	 * Get a player from a URL
-	 *
-	 * @param url player's profile url
-	 * @return OvercastPlayer from url
-	 */
-	public OvercastPlayer getPlayerByUrl(String url) {
-		String user = url.split("https://oc.tc/")[1];
-		return getPlayer(user);
-	}
+    /**
+     * Get a player from a URL
+     *
+     * @param url player's profile url
+     * @return OvercastPlayer from url
+     */
+    public OvercastPlayer getPlayerByUrl(String url) throws ParseException, IOException {
+        String user = url.split("https://oc.tc/")[1];
+        return getPlayer(user);
+    }
 }

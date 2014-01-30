@@ -32,32 +32,32 @@ import java.util.List;
  * @author Jake0oo0
  */
 public class OvercastTournament {
-	List<TournamentTeam> teams;
-	String url;
-	int minPlayers;
+    List<TournamentTeam> teams;
+    String url;
+    int minPlayers;
 
-	/**
-	 * Tournament instance
-	 *
-	 * @param teams List of partaking teams
-	 * @param url tourney url
-	 * @param minPlayers minimum players per team
-	 */
-	public OvercastTournament(List<TournamentTeam> teams, String url, int minPlayers) {
-		this.teams = teams;
-		this.url = url;
-		this.minPlayers = minPlayers;
-	}
+    /**
+     * Tournament instance
+     *
+     * @param teams      List of partaking teams
+     * @param url        tourney url
+     * @param minPlayers minimum players per team
+     */
+    public OvercastTournament(List<TournamentTeam> teams, String url, int minPlayers) {
+        this.teams = teams;
+        this.url = url;
+        this.minPlayers = minPlayers;
+    }
 
-	public List<TournamentTeam> getTeams() {
-		return teams;
-	}
+    public List<TournamentTeam> getTeams() {
+        return teams;
+    }
 
-	public String getUrl() {
-		return url;
-	}
+    public String getUrl() {
+        return url;
+    }
 
-	public int getMinPlayers() {
-		return minPlayers;
-	}
+    public int getMinPlayers() {
+        return minPlayers;
+    }
 }

@@ -21,51 +21,14 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package me.jake0oo0.types;
-
-import me.jake0oo0.parsers.StatParser;
-import me.jake0oo0.stats.TeamStat;
-
-import java.util.List;
+package me.jake0oo0.utils;
 
 /**
- * An instance of a OvercastNetwork league
- * partaking in a current tournament.
- * This class only gets players that are
- * actually on the tourney roster
- *
- * @author Jake0oo0
+ * Created by Jake on 1/30/14.
  */
-public class TournamentTeam {
-    String name;
-    List<OvercastPlayer> players;
-    TeamStat stats;
-
-    /**
-     * A list of players, and the team's stats
-     *
-     * @param players Team players
-     * @param stats   Team stats
-     */
-    public TournamentTeam(String name, List<OvercastPlayer> players, TeamStat stats) {
-        this.name = name;
-        this.players = players;
-        this.stats = stats;
+public class ParseException extends Exception {
+    public ParseException(String s) {
+        super(s);
     }
 
-    public void parseStats() {
-        this.stats = StatParser.parseOvercastTeam(getPlayers());
-    }
-
-    public List<OvercastPlayer> getPlayers() {
-        return players;
-    }
-
-    public TeamStat getStats() {
-        return stats;
-    }
-
-    public String getName() {
-        return name;
-    }
 }

@@ -38,38 +38,28 @@ import java.util.List;
  * Created by jake on 12/28/13.
  */
 public class TournamentParser {
-
-    public static List<TournamentTeam> getTourneyTeams(String url) {
+    public static List<TournamentTeam> getTourneyTeams(String url, boolean parseStats) throws IOException {
         List<TournamentTeam> tournamentTeams = new ArrayList<TournamentTeam>();
         Document doc;
-        try {
-            doc = Jsoup.connect(url)
-                    .userAgent("Mozilla")
-                    .get();
-            List<String> teamNames = new ArrayList<String>();
-            Elements names = doc.select("a[href]");
-            for (Element name : names) {
-                if (name.attr("href").startsWith("/teams/")) {
-                    teamNames.add(name.text());
-                }
+        doc = Jsoup.connect(url)
+                .userAgent("Mozilla")
+                .get();
+        List<String> teamNames = new ArrayList<String>();
+        Elements names = doc.select("a[href]");
+        for (Element name : names) {
+            if (name.attr("href").startsWith("/teams/")) {
+                teamNames.add(name.text());
             }
+        }
 
-            Elements links = doc.select("td[title]");
-            int n = 0;
-
-            for (int i = 0; i < links.size(); i += 2) {
-                String name = teamNames.get(n);
-                List<OvercastPlayer> players = TeamParser.getPlayerObjectList(links.get(i).attr("title"));
-                tournamentTeams.add(new TournamentTeam(name, players, null));
-
-
-                n++;
-            }
-        } catch (IOException e) {
-
+        Elements links = doc.select("td[title]");
+        int n = 0;
+        for (int i = 0; i < links.size(); i += 2) {
+            String name = teamNames.get(n);
+            List<OvercastPlayer> players = TeamParser.getPlayerObjectList(links.get(i).attr("title"));
+            tournamentTeams.add(new TournamentTeam(name, players, parseStats ? StatParser.parseTournamentTeam(players) : null));
+            n++;
         }
         return tournamentTeams;
     }
-
-
 }

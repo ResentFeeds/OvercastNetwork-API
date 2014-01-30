@@ -32,17 +32,18 @@ import java.math.BigDecimal;
  * @author Jake0oo0
  */
 public class NumberUtils {
-	/**
-	 * Round a decimal to the place param
-	 * @param value original decimal
-	 * @param places num of places to round
-	 * @return output double
-	 */
-	public static double round(double value, int places) {
-		if (places < 0) throw new IllegalArgumentException();
+    /**
+     * Round a decimal to the place param
+     *
+     * @param value  original decimal
+     * @param places num of places to round
+     * @return output double
+     */
+    public static double round(double value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
 
-		BigDecimal bd = new BigDecimal(value);
-		bd = bd.setScale(places, BigDecimal.ROUND_HALF_UP);
-		return bd.doubleValue();
-	}
+        BigDecimal bd = new BigDecimal(value);
+        bd = bd.setScale(places, BigDecimal.ROUND_HALF_UP);
+        return bd.doubleValue();
+    }
 }
