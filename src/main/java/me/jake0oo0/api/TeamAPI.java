@@ -64,8 +64,8 @@ public class TeamAPI {
      * @param name team name
      * @return TournamentTeam created from params
      */
-    public TournamentTeam getTourneyTeam(String url, String name) throws ParseException {
-        return TeamParser.parseTournamentTeam(url, name);
+    public TournamentTeam getTourneyTeam(String url, String name, boolean parseStats) throws ParseException {
+        return TeamParser.parseTournamentTeam(url, name, parseStats);
     }
 
     /**

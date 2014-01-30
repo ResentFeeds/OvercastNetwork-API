@@ -44,8 +44,7 @@ import java.util.List;
  * @author Jake0oo0
  */
 public class TeamParser {
-
-    public static TournamentTeam parseTournamentTeam(String tourneyUrl, String teamName) throws ParseException {
+    public static TournamentTeam parseTournamentTeam(String tourneyUrl, String teamName, boolean parseStats) throws ParseException {
         Document doc;
         try {
             doc = Jsoup.connect(tourneyUrl)
@@ -66,7 +65,7 @@ public class TeamParser {
                 String name = teamNames.get(n);
                 if (name.equals(teamName)) {
                     List<OvercastPlayer> players = getPlayerObjectList(links.get(i).attr("title"));
-                    return new TournamentTeam(name, players, StatParser.parseTournamentTeam(players));
+                    return new TournamentTeam(name, players, parseStats ? StatParser.parseTournamentTeam(players) : null);
                 }
 
                 n++;
@@ -157,6 +156,5 @@ public class TeamParser {
         int deaths = Integer.parseInt(arr[6]);
 
         return new TeamStat(kd, kk, kills, deaths, cores, monuments, wools);
-
     }
 }
