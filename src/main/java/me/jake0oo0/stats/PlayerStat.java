@@ -38,6 +38,7 @@ public class PlayerStat {
     int cores;
     int monuments;
     int wools;
+    String server;
 
     /**
      * A player's stats
@@ -51,7 +52,7 @@ public class PlayerStat {
      * @param monuments number of monuments
      * @param wools     number of wools
      */
-    public PlayerStat(Double kd, Double kk, int raindrops, int friends, int kills, int deaths, int cores, int monuments, int wools) {
+    public PlayerStat(Double kd, Double kk, int raindrops, int friends, int kills, int deaths, int cores, int monuments, int wools, String server) {
         this.kd = kd;
         this.kk = kk;
         this.friends = friends;
@@ -61,6 +62,7 @@ public class PlayerStat {
         this.cores = cores;
         this.monuments = monuments;
         this.wools = wools;
+        this.server = server;
     }
 
     public Double getKd() {
@@ -97,5 +99,9 @@ public class PlayerStat {
 
     public int getRaindrops() {
         return raindrops;
+    }
+
+    public String getServer() {
+        return server;
     }
 }

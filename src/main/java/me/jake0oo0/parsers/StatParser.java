@@ -26,10 +26,13 @@ package me.jake0oo0.parsers;
 import me.jake0oo0.stats.PlayerStat;
 import me.jake0oo0.stats.TeamStat;
 import me.jake0oo0.types.OvercastPlayer;
+import me.jake0oo0.types.TournamentTeam;
 import me.jake0oo0.utils.NumberUtils;
 import me.jake0oo0.utils.ParseException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.List;
@@ -59,8 +62,10 @@ public class StatParser {
         int cores;
         int monuments;
         int wools;
+        String server;
         try {
-            doc = Jsoup.connect(url)
+            doc = Jsoup
+                    .connect(url)
                     .timeout(0)
                     .userAgent("Mozilla")
                     .get();
@@ -74,10 +79,11 @@ public class StatParser {
             //raindrops = Integer.parseInt(doc.select("div[class=span3]").select("h2").get(5).text().split(" ")[0]);
             raindrops = 0;
             friends = 0;
+            server = doc.select("h1").select("span").text();
         } catch (IOException e) {
             throw new ParseException("Error parsing player: " + user);
         }
-        return new PlayerStat(kd, kk, raindrops, friends, kills, deaths, cores, monuments, wools);
+        return new PlayerStat(kd, kk, raindrops, friends, kills, deaths, cores, monuments, wools, server);
     }
 
     /**
@@ -86,7 +92,7 @@ public class StatParser {
      * @param players Input team players
      * @return a TeamStat with all player stats calculated
      */
-    public static TeamStat parseTournamentTeam(List<OvercastPlayer> players) {
+    public static TeamStat parseTournamentTeam(List<OvercastPlayer> players) throws IOException, ParseException {
         Double kd = 0.0;
         Double kk = 0.0;
         int kills = 0;
@@ -117,7 +123,7 @@ public class StatParser {
         return new TeamStat(kd, kk, kills, deaths, cores, monuments, wools);
     }
 
-    public static TeamStat parseOvercastTeam(List<OvercastPlayer> players) {
+    public static TeamStat parseOvercastTeam(List<OvercastPlayer> players) throws IOException, ParseException {
         return parseTournamentTeam(players);
     }
 }

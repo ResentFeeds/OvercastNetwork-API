@@ -43,7 +43,7 @@ public class TeamAPI {
      * @param team input OvercastTeam
      * @return TeamStat's of input team
      */
-    public static TeamStat getOvercastTeamStats(OvercastTeam team) {
+    public static TeamStat getOvercastTeamStats(OvercastTeam team) throws IOException, ParseException {
         return StatParser.parseOvercastTeam(team.getPlayers());
     }
 
@@ -53,7 +53,7 @@ public class TeamAPI {
      * @param team input TournamentTeam
      * @return team's stats
      */
-    public static TeamStat getTourneyTeamStats(TournamentTeam team) {
+    public static TeamStat getTourneyTeamStats(TournamentTeam team) throws IOException, ParseException {
         return StatParser.parseTournamentTeam(team.getPlayers());
     }
 

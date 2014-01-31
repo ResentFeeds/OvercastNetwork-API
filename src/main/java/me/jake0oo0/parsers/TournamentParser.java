@@ -25,6 +25,7 @@ package me.jake0oo0.parsers;
 
 import me.jake0oo0.types.OvercastPlayer;
 import me.jake0oo0.types.TournamentTeam;
+import me.jake0oo0.utils.ParseException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -38,27 +39,31 @@ import java.util.List;
  * Created by jake on 12/28/13.
  */
 public class TournamentParser {
-    public static List<TournamentTeam> getTourneyTeams(String url, boolean parseStats) throws IOException {
+    public static List<TournamentTeam> getTourneyTeams(String url, boolean parseStats) throws ParseException {
         List<TournamentTeam> tournamentTeams = new ArrayList<TournamentTeam>();
         Document doc;
-        doc = Jsoup.connect(url)
-                .userAgent("Mozilla")
-                .get();
-        List<String> teamNames = new ArrayList<String>();
-        Elements names = doc.select("a[href]");
-        for (Element name : names) {
-            if (name.attr("href").startsWith("/teams/")) {
-                teamNames.add(name.text());
+        try {
+            doc = Jsoup.connect(url)
+                    .userAgent("Mozilla")
+                    .get();
+            List<String> teamNames = new ArrayList<String>();
+            Elements names = doc.select("a[href]");
+            for (Element name : names) {
+                if (name.attr("href").startsWith("/teams/")) {
+                    teamNames.add(name.text());
+                }
             }
-        }
 
-        Elements links = doc.select("td[title]");
-        int n = 0;
-        for (int i = 0; i < links.size(); i += 2) {
-            String name = teamNames.get(n);
-            List<OvercastPlayer> players = TeamParser.getPlayerObjectList(links.get(i).attr("title"));
-            tournamentTeams.add(new TournamentTeam(name, players, parseStats ? StatParser.parseTournamentTeam(players) : null));
-            n++;
+            Elements links = doc.select("td[title]");
+            int n = 0;
+            for (int i = 0; i < links.size(); i += 2) {
+                String name = teamNames.get(n);
+                List<OvercastPlayer> players = TeamParser.getPlayerObjectList(links.get(i).attr("title"));
+                tournamentTeams.add(new TournamentTeam(name, players, parseStats ? StatParser.parseTournamentTeam(players) : null));
+                n++;
+            }
+        } catch (IOException e) {
+            throw new ParseException("Error parsing: " + url);
         }
         return tournamentTeams;
     }

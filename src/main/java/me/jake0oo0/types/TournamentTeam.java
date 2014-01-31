@@ -25,7 +25,9 @@ package me.jake0oo0.types;
 
 import me.jake0oo0.parsers.StatParser;
 import me.jake0oo0.stats.TeamStat;
+import me.jake0oo0.utils.ParseException;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -53,7 +55,7 @@ public class TournamentTeam {
         this.stats = stats;
     }
 
-    public void parseStats() {
+    public void parseStats() throws IOException, ParseException {
         this.stats = StatParser.parseOvercastTeam(getPlayers());
     }
 
