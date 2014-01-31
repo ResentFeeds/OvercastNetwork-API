@@ -45,7 +45,6 @@ import java.util.List;
  */
 public class TeamParser {
     public static TournamentTeam parseTournamentTeam(String tourneyUrl, String teamName, boolean parseStats) throws ParseException {
-        System.out.println("derp");
         Document doc;
         try {
             doc = Jsoup.connect(tourneyUrl)
@@ -55,7 +54,6 @@ public class TeamParser {
             Elements names = doc.select("a[href]");
             for (Element name : names) {
                 if (name.attr("href").startsWith("/teams/")) {
-                    System.out.println("Team found: " + name.text());
                     teamNames.add(name.text());
                 }
             }

@@ -79,7 +79,7 @@ public class StatParser {
             //raindrops = Integer.parseInt(doc.select("div[class=span3]").select("h2").get(5).text().split(" ")[0]);
             raindrops = 0;
             friends = 0;
-            server = doc.select("h1").select("span").text();
+            server = doc.select("h1").select("small").text();
         } catch (IOException e) {
             throw new ParseException("Error parsing player: " + user);
         }
