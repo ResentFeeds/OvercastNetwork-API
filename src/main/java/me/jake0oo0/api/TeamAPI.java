@@ -43,7 +43,7 @@ public class TeamAPI {
      * @param team input OvercastTeam
      * @return TeamStat's of input team
      */
-    public TeamStat getOvercastTeamStats(OvercastTeam team) {
+    public static TeamStat getOvercastTeamStats(OvercastTeam team) {
         return StatParser.parseOvercastTeam(team.getPlayers());
     }
 
@@ -53,7 +53,7 @@ public class TeamAPI {
      * @param team input TournamentTeam
      * @return team's stats
      */
-    public TeamStat getTourneyTeamStats(TournamentTeam team) {
+    public static TeamStat getTourneyTeamStats(TournamentTeam team) {
         return StatParser.parseTournamentTeam(team.getPlayers());
     }
 
@@ -64,7 +64,7 @@ public class TeamAPI {
      * @param name team name
      * @return TournamentTeam created from params
      */
-    public TournamentTeam getTourneyTeam(String url, String name, boolean parseStats) throws ParseException {
+    public static TournamentTeam getTourneyTeam(String url, String name, boolean parseStats) throws ParseException {
         return TeamParser.parseTournamentTeam(url, name, parseStats);
     }
 
@@ -74,7 +74,7 @@ public class TeamAPI {
      * @param url team url
      * @return output OvercastTeam
      */
-    public OvercastTeam getOvercastTeam(String url, boolean parseStats) throws ParseException {
+    public static OvercastTeam getOvercastTeam(String url, boolean parseStats) throws ParseException {
         return TeamParser.parseOvercastTeam(url, parseStats);
     }
 }
