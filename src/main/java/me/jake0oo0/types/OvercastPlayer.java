@@ -62,7 +62,10 @@ public class OvercastPlayer {
         return username;
     }
 
-    public PlayerStat getStats() {
+    public PlayerStat getStats() throws ParseException, IOException {
+        if (this.stats == null) {
+            parseStats();
+        }
         return stats;
     }
 }

@@ -40,11 +40,12 @@ public class PlayerAPI {
      * @param user username
      * @return OvercastPlayer object from params
      */
-    public OvercastPlayer getPlayer(String user) throws ParseException, IOException {
+    public static OvercastPlayer getPlayer(String user, boolean parseStats) throws ParseException, IOException {
         OvercastPlayer player = new OvercastPlayer(user, null);
-        player.parseStats();
+        if (parseStats) {
+            player.parseStats();
+        }
         return player;
-
     }
 
     /**
@@ -53,8 +54,8 @@ public class PlayerAPI {
      * @param url player's profile url
      * @return OvercastPlayer from url
      */
-    public OvercastPlayer getPlayerByUrl(String url) throws ParseException, IOException {
+    public static OvercastPlayer getPlayerByUrl(String url, boolean parseStats) throws ParseException, IOException {
         String user = url.split("https://oc.tc/")[1];
-        return getPlayer(user);
+        return getPlayer(user, parseStats);
     }
 }
