@@ -92,7 +92,7 @@ public class StatParser {
      * @param players Input team players
      * @return a TeamStat with all player stats calculated
      */
-    public static TeamStat parseTournamentTeam(List<OvercastPlayer> players) throws IOException, ParseException {
+    public static TeamStat parseTournamentTeam(List<OvercastPlayer> players) throws ParseException {
         Double kd = 0.0;
         Double kk = 0.0;
         int kills = 0;
@@ -123,7 +123,7 @@ public class StatParser {
         return new TeamStat(kd, kk, kills, deaths, cores, monuments, wools);
     }
 
-    public static TeamStat parseOvercastTeam(List<OvercastPlayer> players) throws IOException, ParseException {
+    public static TeamStat parseOvercastTeam(List<OvercastPlayer> players) throws ParseException {
         return parseTournamentTeam(players);
     }
 }

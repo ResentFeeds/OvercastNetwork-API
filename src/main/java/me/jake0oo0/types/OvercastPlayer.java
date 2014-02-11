@@ -54,7 +54,7 @@ public class OvercastPlayer {
         parseStats();
     }
 
-    public void parseStats() throws ParseException, IOException {
+    public void parseStats() throws ParseException {
         this.stats = StatParser.parsePlayerStats(getUsername());
     }
 
@@ -62,7 +62,7 @@ public class OvercastPlayer {
         return username;
     }
 
-    public PlayerStat getStats() throws ParseException, IOException {
+    public PlayerStat getStats() throws ParseException {
         if (this.stats == null) {
             parseStats();
         }
